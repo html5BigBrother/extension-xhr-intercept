@@ -1,8 +1,13 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+基于 [Plasmo extension](https://docs.plasmo.com/) 脚手架开发的 chrome 扩展，拦截 XMLHttpRequest 请求
 
-## Getting Started
+<image src="./imageDemo.png">
 
-First, run the development server:
+### Feature
+- 注入自定义 request header
+- url路径拼接自定义参数
+- mock接口数据
+
+### Getting Started
 
 ```bash
 pnpm dev
@@ -16,7 +21,7 @@ You can start editing the popup by modifying `popup.tsx`. It should auto-update 
 
 For further guidance, [visit our Documentation](https://docs.plasmo.com/)
 
-## Making production build
+### Making production build
 
 Run the following:
 
@@ -25,9 +30,6 @@ pnpm build
 # or
 npm run build
 ```
+Open your browser and load the appropriate development build. For example, if you want to use manifest v3, use: `build/chrome-mv3-prod`.
 
 This should create a production bundle for your extension, ready to be zipped and published to the stores.
-
-## Submit to the webstores
-
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/workflows#submit-your-extension) and you should be on your way for automated submission!
